@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <div>
+        <h1>All courses we have</h1>
+        <ul>
+            {% for course in courses %}
+                <h4>Course: {{ course.title }}</h4>
+                <p>About: {{ course.description }}</p>
+                {% for member in course.member.all %}
+                    <h4>Members:</h4> {{ member }} <br><br>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="create/">Create a course</a>
+</body>
+</html>
