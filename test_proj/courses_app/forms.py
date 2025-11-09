@@ -9,3 +9,19 @@ class CourseForm(forms.ModelForm):
         widgets = {
             'member': forms.CheckboxSelectMultiple()
         }
+
+        labels = {
+            'title': 'Назва курсу',
+            'description': 'Опис курсу',
+        }
+
+        help_texts = {
+            'title': 'Ввеідть назву Вашого завдання'
+        }
+
+        error_messages = {
+            'title': {
+                'required': "Обов'язковий для введення",
+            },
+        }
+        
